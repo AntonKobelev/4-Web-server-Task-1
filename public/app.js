@@ -37,7 +37,7 @@ document.addEventListener('click', (event) => {
                 console.log('Введено пустое название!')
             } else {
                 update(idNoteToUpdate, editPrompt).then(() => {
-                    console.log('Ok!')
+                    event.target.closest('li').querySelector('span').innerText = editPrompt
                 })
             }
         }
